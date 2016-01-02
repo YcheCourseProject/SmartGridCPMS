@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>基于物理-信息异常融合的智能电网攻击检测系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/css.css">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<!-- jquery -->
+    <script src="js/jquery.1.8.2.min.js"></script>
+
+
+    <!-- Bootstrap swith-->
+    <link href="dist/css/bootstrap-switch.css" rel="stylesheet">    
+    <script src="dist/js/bootstrap-switch.min.js"></script>
+    <!-- highcharts -->
+    <script src="assets/highcharts/js/highcharts.js"></script>
+    <script src="assets/highcharts/js/modules/exporting.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container"> <!-- container -->
+
+    <!-- 导航开始 -->
+      <div class="masthead">
+        <h3 class="text-muted">基于物理信息-异常融合的智能电网攻击检测系统</h3>
+        <ul class="nav nav-justified ">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>主页</a></li>
+          <li class="active"><a href="realtime.html"><span class="glyphicon glyphicon-random"></span>实时曲线</a></li>
+          <li><a href="history.html"><span class="glyphicon glyphicon-calendar"></span>历史曲线</a></li>
+          <li><a href="table.html"><span class="glyphicon glyphicon-search"></span>多表查询</a></li>
+          <li><a href="statistic.html"><span class="glyphicon glyphicon-stats"></span>统计数据</a></li>
+          <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我们</a></li>
+        </ul>
+      </div>
+      <!-- 导航结束 -->
+
+    <div  class="switch" id="update-checkbox">实时刷新：
+        <input type="checkbox" checked/><!-- 留不留？ -->
+    </div>
+	  <div id="powergraph" style="min-width: 310px; height: 300px; margin: 20px auto">
+      
+    </div> <!-- /powergraph -->
+
+    <div id="detapowergraph" style="min-width: 310px; height: 300px; margin: 20px auto">
+      
+    </div> <!-- /detapowergraph -->
+
+    </div> <!-- /container -->
+
+    <footer class="footer ">
+          <p>
+            CopyRight 2014-2015 &copy;<b style="color:#333;">Smart Grid Team</b> All Rights Reserved
+          </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+    <script type="text/javascript">
+      // switch
+      $("#update-checkbox input").bootstrapSwitch('onColor','primary');
+      $("#update-checkbox input").bootstrapSwitch('offColor','info');
+      $("#update-checkbox input").bootstrapSwitch('size','large');
+      $('#update-checkbox input').on('switchChange.bootstrapSwitch', function (event, state) {
+          console.log(this); // DOM element
+          console.log(event); // jQuery event
+          console.log(state); // true | false
+      });
+
+
+      $(function () {
+          $(document).ready(function() {
+              Highcharts.setOptions({
+                  global: {
+                      useUTC: false
+                  }
+              });
+          
+              var chart1,chart2;
+
+              //绘制三表功率曲线图
+              var datapsum = [], datap1 = [], datap2 = [], datapratio = [];
+            
+              $.getJSON("HandlerGraph.ashx", { content: "initrealpower" }, function (data) {
+                  //alert("initialcallback");
+                  $(data).each(function (i) {
+                      psum = parseFloat(parseFloat(data[i]["powersum"]).toFixed(4));
+                      time = (new Date()).getTime();
+                      datapsum.push({
+                          //x: data[i]["time"],
+                          x: time + (i - 19) * 1000,
+                          y: psum
+                      });
+                      p1 = parseFloat(parseFloat(data[i]["power1"]).toFixed(4));
+                      datap1.push({
+                          //x: data[i]["time"],
+                          x: time + (i - 19) * 1000,
+                          y: p1
+                      });
+                      p2 = parseFloat(parseFloat(data[i]["power2"]).toFixed(4));
+                      datap2.push({
+                          //x: data[i]["time"],
+                          x: time + (i - 19) * 1000,
+                          y: p2
+                      });
+                      pratio = parseFloat(parseFloat(data[i]["ratio"]).toFixed(4));
+                      datapratio.push({
+                          //x: data[i]["time"],
+                          x: time + (i - 19) * 1000,
+                          y: pratio
+                      });
+                      console.log('i', i);
+                      console.log('power1', p1);
+                      console.log('time', datap2[i]["x"]);
+                      console.log('psum', psum);
+                      console.log('power2', p2);
+                      console.log('pratio', pratio);
+                  });
+                  //回调解析完点的数据后开始画图
+                  chart1 = new Highcharts.Chart({
+                      chart: {
+                          renderTo: 'powergraph',//装载容器id
+                          type: 'spline',
+                          animation: Highcharts.svg, // don't animate in old IE
+                          marginRight: 10,
+                          events: {
+                              load: function () {
+                                  // set up the updating of the chart each second
+                                  var series = this.series[0];
+                                  var series2 = this.series[1];
+                                  var series3 = this.series[2];
+                                  var psum, p1, p2, time;
+                                  setInterval(function () {
+                                      //alert("in");
+                                      $.getJSON("HandlerGraph.ashx", { content: "realtimepower" }, function (data) {
+                                          $(data).each(function (i) {
+                                              psum = parseFloat(parseFloat(data[0]["powersum"]).toFixed(4));
+                                              p1 = parseFloat(parseFloat(data[0]["power1"]).toFixed(4));
+                                              p2 = parseFloat(parseFloat(data[0]["power2"]).toFixed(4));
+                                              //time = data[i]["time"];
+                                              time = (new Date()).getTime();
+                                              x = time;
+                                              y = psum;
+                                              y2 = p1,
+                                              y3 = p2;
+                                              console.log('x：', x);
+                                              console.log('y：', x);
+                                              console.log('y2:', y2);
+                                              console.log('y3', y3);
+                                              series.addPoint([x, y], false, true);
+                                              series2.addPoint([x, y2], false, true);
+                                              series3.addPoint([x, y3], true, true);
+                                          });
+                                      })
+
+                                  }, 1000);
+                              }
+                          }
+                      },
+                      title: {
+                          text: '实时功率'
+                      },
+                      xAxis: {
+                          type: 'datetime',
+                          tickPixelInterval: 150
+                      },
+                      yAxis: {
+                          title: {
+                              text: '有功功率'
+                          },
+                          plotLines: [{
+                              value: 0,
+                              width: 1,
+                              color: '#808080'
+                          }]
+                      },
+                      tooltip: {
+                          formatter: function () {
+                              return '<b>' + this.series.name + '</b><br/>' +
+                              Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                              Highcharts.numberFormat(this.y, 2);
+                          }
+                      },
+                      legend: {
+                          enabled: true
+                      },
+                      exporting: {
+                          enabled: true
+                      },
+                      series: [{
+                          name: '总路计量',
+                          data: (function () {
+                              return datapsum;
+                          })()
+
+                      },
+                      {
+                          name: '支路I计量',
+                          data: (function () {
+                              return datap1;
+                          })()
+                      },
+                      {
+                          name: '支路II计量',
+                          data: (function () {
+                              return datap2;
+                          })()
+                      }]
+                  });//绘制三表功率曲线图结束
+
+                  chart2 = new Highcharts.Chart({
+                      chart: {
+                          renderTo: 'detapowergraph',//装载容器id
+                          type: 'spline',
+                          animation: Highcharts.svg, // don't animate in old IE
+                          marginRight: 10,
+                          events: {
+                              load: function () {
+
+                                  // set up the updating of the chart each second
+                                  var series = this.series[0];
+                                  setInterval(function () {
+                                      //var x = (new Date()).getTime(), // current time
+                                      //    y = Math.random();
+                                      //series.addPoint([x, y], true, true);
+                                      var pratio = 0, time = 0;
+                                      $.getJSON("HandlerGraph.ashx", { content: "getSinglePowerData" }, function (data) {
+                                          $(data).each(function (i) {
+                                              pratio = parseFloat(parseFloat(data[i]["ratio"]).toFixed(4));
+                                              time = (new Date()).getTime();
+                                              x = time;
+                                              y = pratio;
+                                              console.log('chart2x', x);
+                                              console.log('chart2y', y);
+                                              series.addPoint([x, y], true, true);
+                                          });
+                                      })
+
+                                  }, 1000);
+
+                              }
+                          }
+                      },
+                      title: {
+                          text: '实时功率差值'
+                      },
+                      xAxis: {
+                          type: 'datetime',
+                          tickPixelInterval: 150
+                      },
+                      yAxis: {
+                          title: {
+                              text: '有功功率差值（W）'
+                          },
+                          plotLines: [{
+                              value: 0,
+                              width: 1,
+                              color: '#808080'
+                          }]
+                      },
+                      tooltip: {
+                          formatter: function () {
+                              return '<b>' + this.series.name + '</b><br/>' +
+                              Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                              Highcharts.numberFormat(this.y, 2);
+                          }
+                      },
+                      legend: {
+                          enabled: true
+                      },
+                      exporting: {
+                          enabled: true
+                      },
+                      series: [{
+                          name: '线路功率差值',
+                          data: datapratio
+                      }]
+                  });//绘制功率差值曲线图结束
+              })//绘制功率差值曲线图结束   
+
+          }); //<!-- end of $(document).ready(function() -->
+          
+      });
+    </script>
+
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>基于物理-信息异常融合的智能电网攻击检测系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css.css">
+    <!-- datetimepicker css -->
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+
+<!--     <link href="assets/tablecloth/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/tablecloth/css/tablecloth.css" rel="stylesheet">
+    <link href="assets/tablecloth/css/prettify.css" rel="stylesheet">  -->
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  <!-- jquery -->
+    <script src="js/jquery.1.8.2.min.js"></script>
+
+
+    <!-- Bootstrap swith-->
+    <link href="dist/css/bootstrap-switch.css" rel="stylesheet">    
+    <script src="dist/js/bootstrap-switch.min.js"></script>
+    <!-- highcharts -->
+    <script src="assets/highcharts/js/highcharts.js"></script>
+    <script src="assets/highcharts/js/modules/exporting.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <script type="text/javascript">
+          $(document).ready(function()
+          {
+              $("#physical_system_table").css("display", "none");
+              $("#cyber_system_table").css("display", "none");
+              $("#fusion_system_table").css("display", "none");
+              //$.get("data0.json", success0, "json");
+              $("#choosetable_input").change(refresh);           
+              function refresh() {
+                  //仅仅切换如何显示
+                  $("#physical_system_table").css("display", "none");
+                  $("#cyber_system_table").css("display", "none");
+                  $("#fusion_system_table").css("display", "none");
+                  var tablename = $("#choosetable_input  option:selected").val();
+                  if (tablename == "physical_system_table") {
+                      $.get("data0.json", success0, "json");
+                  }
+                  else if (tablename == "cyber_system_table") {
+                      $.get("data1.json", success1, "json");
+                  }
+                  else
+                      $.get("data2.json", success2, "json");
+                  function success0(data) {
+                      $("#physical_system_table").css("display", "table");
+                      var result;
+                      $(data).each(function (i) {
+                          if (data[i]["phywarn"] == 1)
+                              result += '<tr class="error">';
+                          else
+                              result += '<tr>';
+                          result += '<td>' + data[i]["num"] + '</td>';
+                          result += '<td>' + data[i]["time"] + '</td>';
+                          result += '<td>' + parseFloat(data[i]["powersum"]).toFixed(4) + '</td>';
+                          result += '<td>' + parseFloat(data[i]["power1"]).toFixed(4) + '</td>';
+                          result += '<td>' + parseFloat(data[i]["power2"]).toFixed(4) + '</td>';
+                          result += '<td>' + parseFloat(data[i]["ratio"]).toFixed(4) + '</td>';
+                          result+='</tr>'
+                      });
+                      $("#table0").html(result);
+                  }
+                  function success1(data) {
+                      $("#cyber_system_table").css("display", "table");
+                      var result='';
+                      $(data).each(function (i) {
+                          result += '<tr class="error">';                      
+                          result += '<td>' + data[i]["cid"] + '</td>';
+                          result += '<td>' + data[i]["timestp"] + '</td>';
+                          result += '<td>' + Num2IP(data[i]["ip_src"]) + '</td>';
+                          result += '<td>' + Num2IP(data[i]["ip_dst"]) + '</td>';
+                          result += '<td>' + data[i]["sig_name"] + '</td>';                        
+                          result += '</tr>'
+                      });
+                      $("#table1").html(result);
+                  }
+                  function success2(data) {
+                      $("#fusion_system_table").css("display", "table");                       
+                      var result = '';
+                      $(data).each(function (i) {
+                          //if (data[i]["th_percent"] == 0)
+                          //    result += '<tr>';
+                          //else
+                          result += '<tr class="error">';
+                          result += '<td>' + i + '</td>';
+                          result += '<td>' + data[i]["time"] + '</td>';
+                          result += '<td>' + parseFloat(data[i]["ratio"]).toFixed(4) + '</td>';
+                          result += '<td>' + "报警" + '</td>';
+                          result += '<td>' + data[i]["sig_name"] + '</td>';
+                          result += '<td>' + "采取措施" + '</td>';
+                          result += '</tr>'
+                      });
+                      $("#table2").html(result);
+                  }
+              }//end of refresh
+              $("#tables_search").submit(function()
+              {
+                  nowchoice = $("#choosetable_input  option:selected").val();
+                  endtime = $("#starttime_input").val();
+                  duration = $("#interval_input").val();
+                  nowtable = $("#choosetable_input  option:selected").val();
+                  var data = { endtime: endtime, durationtime: duration ,select:nowtable};
+                  $.post("HandlerTableData.ashx", data, function (data, textStatus) {
+                      // data 可以是 xmlDoc, jsonObj, html, text, 等等.  
+                      $("#" + nowtable).css("display", "table")
+                      {
+                          //alert(nowtable);
+                          refresh();
+                      }
+                  }, "json");
+                  return false;
+              })
+          })
+          function Num2IP(num) {
+              //alert("ri");
+              var str;
+              var tt = new Array();
+              tt[0] = (num >>> 24) >>> 0;
+              tt[1] = ((num << 8) >>> 24) >>> 0;
+              tt[2] = (num << 16) >>> 24;
+              tt[3] = (num << 24) >>> 24;
+              str = String(tt[0]) + "." + String(tt[1]) + "." + String(tt[2]) + "." + String(tt[3]);
+              return str;
+          }
+      </script>
+  </head>
+
+  <body>
+
+    <div class="container"> <!-- container -->
+
+    <!-- 导航开始 -->
+      <div class="masthead">
+        <h3 class="text-muted">基于物理信息-异常融合的智能电网攻击检测系统</h3>
+        <ul class="nav nav-justified ">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>主页</a></li>
+          <li><a href="realtime.html"><span class="glyphicon glyphicon-random"></span>实时曲线</a></li>
+          <li><a href="history.html"><span class="glyphicon glyphicon-calendar"></span>历史曲线</a></li>
+          <li class="active"><a href="table.html"><span class="glyphicon glyphicon-search"></span>多表查询</a></li>
+          <li><a href="statistic.html"><span class="glyphicon glyphicon-stats"></span>统计数据</a></li>
+          <li><a href="about.html"><span class="glyphicon glyphicon-user"></span>关于我们</a></li>
+        </ul>
+      </div>
+      <!-- 导航结束 -->
+
+     <form class="form-horizontal search_bar" id="tables_search">
+        <fieldset>
+        <!-- <legend>查询区间选择</legend> -->
+        <div class="row">
+          <label for="starttime_input" class="col-md-2 control-label">起始时间：</label>
+          <div class="input-group date form_time col-md-3" data-link-field="starttime_input" data-link-format="yyyy-mm-dd hh:ii">
+              <input class="form-control" size="16" type="text" value="" readonly="true">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+              <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+          </div>
+          <input type="hidden" id="starttime_input" value="" />
+
+          <label for="interval_input" class="col-md-2 control-label">回溯时长：</label>
+               
+            <select id="interval_input" class="form-control" vaule="1 hour">
+              <option>1 hour</option>
+              <option>2 hours</option>
+              <option>3 hours</option>
+              <option>4 hours</option>
+              <option>5 hours</option>
+              <option>6 hours</option>
+            </select>
+
+          <label for="choosetable_input" class="col-md-2 control-label">表格选择：</label>             
+            <select id="choosetable_input" class="form-control col-md-2 ">
+              <option value="physical_system_table">physical</option>
+              <option value="cyber_system_table">cyber</option>
+              <option value="fusion_system_table">fusion</option>
+            </select>
+               
+          <input type="submit" value="查询" class="btn btn-large btn-primary ">
+        </div>
+        </fieldset>
+    </form>
+
+ 
+
+ <table class="table table-hover table-bordered table-striped multi-tables" id="physical_system_table">
+    <!-- <caption>物理系统数据表格</caption> -->
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>时间</th>
+        <th>总表有功功率</th>
+        <th>表I有功功率</th>
+        <th>表II有功功率</th>
+        <th>线路损耗功率</th>
+      </tr>
+    </thead>
+    <tbody id="table0">
+
+    <tr>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+    </tr>
+    <tr class="error">
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+      <td>insert table data</td>
+    </tr>
+
+
+
+    </tbody>
+  </table>
+ <table class="table table-hover table-bordered table-striped multi-tables" id="cyber_system_table">
+    <!-- <caption>IDS表格</caption> -->
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>时间</th>
+        <th>源IP地址</th>
+        <th>目的IP地址</th>
+        <th>报警威胁程度</th>
+      </tr>
+    </thead>
+    <tbody id="table1">
+      <tr class="error">
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+      </tr>
+      <tr>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+      </tr>
+      
+
+    </tbody>
+  </table>
+ <table class="table table-hover table-bordered table-striped multi-tables" id="fusion_system_table">
+    <!-- <caption>融合数据表格</caption> -->
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>时间</th>
+        <th>线路损耗功率</th>
+        <th>物理系统异常</th>
+        <th>信息系统异常</th>
+        <th>融合检测结果</th>
+      </tr>
+    </thead>
+    <tbody id="table2">
+      <tr class="error">
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+      </tr>
+      <tr>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+        <td>insert table data</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+    </div> <!-- /container -->
+
+    <footer class="footer ">
+          <p>
+            CopyRight 2014-2015 &copy;<b style="color:#333;">Smart Grid Team</b> All Rights Reserved
+          </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+   <script type="text/javascript" src="dist/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+   <script type="text/javascript" src="dist/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+ 
+<!--       <script src="assets/tablecloth/js/jquery.metadata.js"></script>
+     <script src="assets/tablecloth/js/jquery.tablesorter.min.js"></script>
+      <script src="assets/tablecloth/js/jquery.tablecloth.js"></script> -->
+    
+     <script type="text/javascript" charset="utf-8">
+  //     $(document).ready(function() {
+  //       $(".multi-tables").tablecloth({
+  //         theme: "default",
+  //         striped: true,
+  //         sortable: true,
+  //         condensed: true
+  //       });
+  //     });
+     </script>
+
+  // <script type="text/javascript">
+
+ 
+
+    $('.form_time').datetimepicker({
+          // language:  'zh-CN',
+          weekStart: 1,
+          format:"yyyy-mm-dd hh:ii" ,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 0,
+          minView: 0,
+          maxView: 2,
+          forceParse: 0,
+          minuteStep: 10,
+          pickerPosition: "bottom-left"
+      });
+  </script>
+
+
+
+
+</html>
