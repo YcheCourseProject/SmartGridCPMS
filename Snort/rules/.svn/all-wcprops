@@ -1,0 +1,431 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules
+END
+attack-responses.rules
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/attack-responses.rules
+END
+experimental.rules
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/experimental.rules
+END
+netbios.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/netbios.rules
+END
+oracle.rules
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/oracle.rules
+END
+mysql.rules
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/mysql.rules
+END
+e2.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e2.rules
+END
+web-misc.rules
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-misc.rules
+END
+virus.rules
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/virus.rules
+END
+e4.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e4.rules
+END
+open-test.conf
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/open-test.conf
+END
+x11.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/x11.rules
+END
+e6.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e6.rules
+END
+e8.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e8.rules
+END
+snmp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/snmp.rules
+END
+web-cgi.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-cgi.rules
+END
+web-activex.rules
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-activex.rules
+END
+porn.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/porn.rules
+END
+nntp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/nntp.rules
+END
+pop2.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/pop2.rules
+END
+icmp-info.rules
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/icmp-info.rules
+END
+rpc.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/rpc.rules
+END
+backdoor.rules
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/backdoor.rules
+END
+ddos.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/ddos.rules
+END
+web-client.rules
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-client.rules
+END
+other-ids.rules
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/other-ids.rules
+END
+shellcode.rules
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/shellcode.rules
+END
+bad-traffic.rules
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/bad-traffic.rules
+END
+finger.rules
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/finger.rules
+END
+VRT-License.txt
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/VRT-License.txt
+END
+web-coldfusion.rules
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-coldfusion.rules
+END
+smtp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/smtp.rules
+END
+shellcodePorts.conf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/shellcodePorts.conf
+END
+dos.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/dos.rules
+END
+imap.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/imap.rules
+END
+icmp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/icmp.rules
+END
+multimedia.rules
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/multimedia.rules
+END
+telnet.rules
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/telnet.rules
+END
+misc.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/misc.rules
+END
+specific-threats.rules
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/specific-threats.rules
+END
+sql.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/sql.rules
+END
+policy.rules
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/policy.rules
+END
+spyware-put.rules
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/spyware-put.rules
+END
+web-php.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-php.rules
+END
+rservices.rules
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/rservices.rules
+END
+e1.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e1.rules
+END
+deleted.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/deleted.rules
+END
+e3.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e3.rules
+END
+e5.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e5.rules
+END
+e2.synth.rules
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e2.synth.rules
+END
+bhsd.conf
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/bhsd.conf
+END
+e7.rules
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e7.rules
+END
+tftp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/tftp.rules
+END
+e5.synth.rules
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/e5.synth.rules
+END
+pop3.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/pop3.rules
+END
+content-replace.rules
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/content-replace.rules
+END
+dns.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/dns.rules
+END
+cgi-bin.list
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/cgi-bin.list
+END
+ftp.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/ftp.rules
+END
+local.rules
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/local.rules
+END
+info.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/info.rules
+END
+web-iis.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-iis.rules
+END
+web-frontpage.rules
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-frontpage.rules
+END
+p2p.rules
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/p2p.rules
+END
+web-attacks.rules
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/web-attacks.rules
+END
+flowbits_setonly.rules
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/flowbits_setonly.rules
+END
+scada.rules
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/scada.rules
+END
+voip.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/voip.rules
+END
+chat.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/chat.rules
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/Makefile.am
+END
+scan.rules
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/scan.rules
+END
+exploit.rules
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/rules/exploit.rules
+END

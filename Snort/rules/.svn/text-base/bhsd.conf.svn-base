@@ -1,0 +1,34 @@
+#  @brief	BotHunter Scan Detector
+# 
+#  Purpose:	BHSD detects scans using weights sensitive to malware-specific
+#  		scanning behavior.
+# 
+#  Arguments:	bhsd's "preprocessor" line in snort's configuration file accepts 
+#
+#	PruneInterval		   240
+#       ScannedSuppressTimeWindow  120
+#       ScannedTimeWindow	   360
+#       IPScannedModerate	     5
+#       IPScannedHigh		    10
+#       ScannerSuppressTimeWindow   90
+#       ScannerTimeWindow	   360
+#       IPScannerModerate	     9
+#       IPScannerHigh		    20
+#  	ScannerFocusThreshold	  0.75
+#  	ScannerFocusMinCount	     4
+#  	ScannerFocusWeights 1.0,1.0,1.0,0.0	// S M O I focus weights
+#       IgnoreScannerList   [IP1,IP2] // IP "scanner" whitelist
+#       IgnoreScannedList   [IP1,IP2] // ignore "scans" to these addresses
+
+preprocessor bhsd:                                                      \
+      IgnoreScannerList         [$DNS_SERVERS,$SMTP_SERVERS]            \
+      IgnoreScannedList         [192.168.1.1]                           \
+      ScannedSuppressTimeWindow  120                                    \
+      ScannedTimeWindow          360                                    \
+      ScannerSuppressTimeWindow   90                                    \
+      ScannerTimeWindow          360                                    \
+      IPScannerModerate           10                                    \
+      IPScannerHigh               21                                    \
+      ScannerFocusThreshold      0.8                                    \
+      ScannerFocusMinCount         4                                    \
+      ScannerFocusWeights       1.0,4.0,1.0,0.0

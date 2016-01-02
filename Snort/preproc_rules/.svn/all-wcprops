@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/CPS_System/!svn/ver/15/trunk/Snort/preproc_rules
+END
+preprocessor.rules
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CPS_System/!svn/ver/15/trunk/Snort/preproc_rules/preprocessor.rules
+END
+decoder.rules
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/CPS_System/!svn/ver/15/trunk/Snort/preproc_rules/decoder.rules
+END

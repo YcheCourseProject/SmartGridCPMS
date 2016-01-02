@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/CPS_System/!svn/ver/15/trunk/Snort/contrib
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/contrib/Makefile.in
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/contrib/Makefile.am
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/contrib/README
+END

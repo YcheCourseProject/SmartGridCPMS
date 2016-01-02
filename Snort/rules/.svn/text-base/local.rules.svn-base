@@ -1,0 +1,13 @@
+# ------------
+# LOCAL RULES
+# ------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+#alert tcp any any -> any 502  (msg:"I am modbus hahah"; sid:1000000;)
+alert tcp any any -> any 502 (flags: S; msg:"Possible Modbus DoS"; flow: stateless; threshold: type both, track by_src, count 13, seconds 10; sid:1000001;)
+
+alert tcp any any -> any 502  (content:"|00 00|"; offset:2; depth:2; content:"|10|";offset:7;depth:1;content:"|c3|";offset:8;depth:1;content:"|5b|";offset:9;depth:1;flow:established, to_server;msg:"Possible MODBUS Parameter Modification Behaviour (primary current)";sid:1000002; priority:5;)
+
+#alert tcp any any -> any 502  (content:"|10|";offset:7;depth:1;content:"|00 00|";offset:2;depth:2;content:"|c3|";offset:8;depth:1;content:"|51|";offset:9;depth:1;flow:established, to_server;msg:"Possible MODBUS Parameter Modification Behaviour (connection type)";sid:1000003;)
+
+alert tcp any any -> any 502  (flow:established, to_server; content:"|ff|"; offset:8; depth:1; content:"|0e|"; offset:9; depth:1; threshold: type both, track by_src, count 3, seconds 10; msg:"Possible MODBUS Password Modification Behaviour";sid:1000004; priority:4;)

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/CPS_System/!svn/ver/15/trunk/Snort/bin
+END
+ntwdblib.dll
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/bin/ntwdblib.dll
+END
+pcre.dll
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/CPS_System/!svn/ver/15/trunk/Snort/bin/pcre.dll
+END
+snort.exe
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/CPS_System/!svn/ver/15/trunk/Snort/bin/snort.exe
+END
+LibnetNT.dll
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/bin/LibnetNT.dll
+END

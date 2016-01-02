@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor
+END
+sf_dce2.dll
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_dce2.dll
+END
+sf_ssh.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_ssh.dll
+END
+sf_dcerpc.dll
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_dcerpc.dll
+END
+sf_ssl.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_ssl.dll
+END
+sf_smtp.dll
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_smtp.dll
+END
+sf_dns.dll
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_dns.dll
+END
+sf_ftptelnet.dll
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/CPS_System/!svn/ver/15/trunk/Snort/lib/snort_dynamicpreprocessor/sf_ftptelnet.dll
+END

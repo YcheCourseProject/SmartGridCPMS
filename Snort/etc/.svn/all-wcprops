@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc
+END
+classification.config
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/classification.config
+END
+sid-msg.map
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/sid-msg.map
+END
+threshold.conf
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/threshold.conf
+END
+reference.config
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/reference.config
+END
+unicode.map
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/unicode.map
+END
+gen-msg.map
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/gen-msg.map
+END
+snort.conf
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/etc/snort.conf
+END

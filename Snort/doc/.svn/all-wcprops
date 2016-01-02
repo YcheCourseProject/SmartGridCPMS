@@ -1,0 +1,365 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc
+END
+README.SMTP
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.SMTP
+END
+README.pcap_readmode
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.pcap_readmode
+END
+faq.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/faq.pdf
+END
+README.ipv6
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ipv6
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/Makefile.in
+END
+README.FLEXRESP
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.FLEXRESP
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/AUTHORS
+END
+README.ARUBA
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ARUBA
+END
+README.csv
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.csv
+END
+README.ssh
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ssh
+END
+README.wireless
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.wireless
+END
+CREDITS
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/CREDITS
+END
+README.ipip
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ipip
+END
+README.ssl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ssl
+END
+README.UNSOCK
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.UNSOCK
+END
+README.frag3
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.frag3
+END
+BUGS
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/BUGS
+END
+README.ftptelnet
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ftptelnet
+END
+README.decoder_preproc_rules
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.decoder_preproc_rules
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/INSTALL
+END
+README.FLEXRESP2
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.FLEXRESP2
+END
+WISHLIST
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/WISHLIST
+END
+RELEASE.NOTES
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/RELEASE.NOTES
+END
+README.gre
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.gre
+END
+generators
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/generators
+END
+snort_schema_v106.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/snort_schema_v106.pdf
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/NEWS
+END
+README.stream5
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.stream5
+END
+README.PLUGINS
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.PLUGINS
+END
+README.decode
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.decode
+END
+README.dns
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.dns
+END
+README.event_queue
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.event_queue
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/LICENSE
+END
+PROBLEMS
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/PROBLEMS
+END
+README.flowbits
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.flowbits
+END
+README.thresholding
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.thresholding
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/ChangeLog
+END
+README.ppm
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.ppm
+END
+README.dcerpc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.dcerpc
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README
+END
+README.asn1
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.asn1
+END
+README.alert_order
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.alert_order
+END
+README.WIN32
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.WIN32
+END
+README.database
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.database
+END
+README.http_inspect
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.http_inspect
+END
+README.multipleconfigs
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.multipleconfigs
+END
+snort_manual.tex
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/snort_manual.tex
+END
+README.PerfProfiling
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.PerfProfiling
+END
+README.reload
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.reload
+END
+README.filters
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.filters
+END
+README.variables
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.variables
+END
+USAGE
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/USAGE
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/TODO
+END
+faq.tex
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/faq.tex
+END
+README.tag
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.tag
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/Makefile.am
+END
+README.INLINE
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.INLINE
+END
+snort_manual.pdf
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/snort_manual.pdf
+END
+README.dcerpc2
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.dcerpc2
+END
+README.sfportscan
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/CPS_System/!svn/ver/15/trunk/Snort/doc/README.sfportscan
+END

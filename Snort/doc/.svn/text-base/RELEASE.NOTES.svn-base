@@ -1,0 +1,10 @@
+2009-10-21 - Snort 2.8.5.1
+
+[*] Improvements
+   * Fixed syslog output when running on Windows.
+
+   * Fixed potential segfault when printing IPv6 packets using the -v option.
+     Thanks to Laurent Gaffie for reporting this issue.
+
+   * Fixed segfault when additional policies were added during a configuration
+     reload.

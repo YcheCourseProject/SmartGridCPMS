@@ -1,0 +1,24 @@
+###################################
+### Peer Coordination Events
+###################################
+alert icmp $HOME_NET any       -> $EXTERNAL_NET any         (msg:"E7[rb] ET TROJAN Storm Worm ICMP DDOS Traffic"; itype:8; icode:0; dsize:32; content:"abcdefghijklmnopqr|00 00|"; depth:22; threshold:type both, track by_src, count 1, seconds 60; classtype:trojan-activity; sid:2007618; rev:5;)
+alert udp $HOME_NET 1024:65535 -> $EXTERNAL_NET 1024:65535  (msg:"E7[rb] BotHunter Storm Worm Peer Coordination Event 11"; content:"|E311|"; depth:5; rawbytes; pcre:"/[0-9]+\.mpg\;size\=[0-9]+/x"; rawbytes; classtype:bad-unknown; sid:9910013; rev:99;)
+alert udp $HOME_NET 1024:65535 -> $EXTERNAL_NET 1024:65535  (msg:"E7[rb] BotHunter Storm Worm Peer Coordination Event 13"; content:"|E313|"; depth:5; rawbytes; pcre:"/[0-9]+\.mpg\;size\=[0-9]+/x"; rawbytes; classtype:bad-unknown; sid:9910011; rev:99;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET $HTTP_PORTS (msg:"E7[rb] ET CURRENT_EVENTS Possible Storm Worm EXE Request (Trojan Downloader User Agent)"; flow:established,to_server; content:"|0d 0a|User-Agent\: Mozilla/4.0 (compatible\; MSIE 6.0\; Windows NT 5.1\; SV1921)|0d 0a|"; classtype:trojan-activity; reference:url,www.sudosecure.net/archives/67; sid:2008193; rev:1;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET $HTTP_PORTS (msg:"E7[rb] ET CURRENT_EVENTS Possible Storm Worm EXE Request (bof)"; flow:established,to_server; content:"GET "; depth:4; uricontent:"/load.php|3F|bof"; nocase; classtype:trojan-activity; reference:url,www.sudosecure.net/archives/119; sid:2008235; rev:2;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET $HTTP_PORTS (msg:"E7[rb] ET CURRENT_EVENTS Possible Storm Worm EXE Request (postcard.exe)"; flow:established,to_server; content:"GET "; depth:4; uricontent:"/postcard.exe"; nocase; classtype:trojan-activity; reference:url,www.sudosecure.net/archives/146; reference:url,www.us-cert.gov/current/index.html#new_storm_worm_varient_spreading; reference:url,www.us-cert.gov/current/archive/2008/07/29/archive.html#new_storm_worm_activity_spreading; reference:url,www.sophos.com/security/blog/2008/07/1599.html; sid:2008077; rev:16;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET $HTTP_PORTS (msg:"E7[rb] ET TROJAN Storm C&C with typo'd User-Agent (Windoss)"; flow:established,to_server; content:"User-Agent\: Mozilla/4.0 (compatible\; MSIE 6.0\; Windoss NT"; depth:200; classtype:trojan-activity; sid:2007742; rev:3;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET $HTTP_PORTS (msg:"E7[rb] ET TROJAN Stormy Variant HTTP Request"; flow:established,to_server; uricontent:"/zzu/zc.php?l="; nocase; uricontent:"&d="; nocase; uricontent:"&v="; nocase; uricontent:"&k="; nocase; classtype:trojan-activity; sid:2003435; rev:2;)
+alert tcp $EXTERNAL_NET 6667   -> $HOME_NET any             (msg:"E7[rb] ET P2P iroffer IRC Bot help message"; flow: from_server,established; content:"|54 6F 20 72 65 71 75 65 73 74 20 61 20 66 69 6C 65 20 74 79 70 65 3A 20 22 2F 6D 73 67|"; depth: 500; classtype: trojan-activity; reference:url,iroffer.org; sid:2000338; rev:4;)
+alert tcp $EXTERNAL_NET 6667   -> $HOME_NET any             (msg:"E7[rb] ET P2P iroffer IRC Bot offered files advertisement"; flow: from_server,established; content:"|54 6F 74 61 6C 20 4F 66 66 65 72 65 64 3A|"; depth: 500; classtype: trojan-activity; reference:url,iroffer.org; sid:2000339; rev:4;)
+alert udp $HOME_NET 1024:65535 -> $EXTERNAL_NET 1024:65535  (msg:"E7[rb] ET TROJAN Storm Worm Encrypted Variant 1 Traffic (1)"; dsize:25; content:"|10 a6|"; depth:2; threshold: type both, count 2, seconds 60, track by_src; classtype:trojan-activity; sid:2007701; rev:3;)
+alert udp $HOME_NET 1024:65535 -> $EXTERNAL_NET 1024:65535  (msg:"E7[rb] ET TROJAN Storm Worm Encrypted Variant 1 Traffic (2)"; dsize:25; content:"|10 a0|"; depth:2; threshold: type both, count 2, seconds 60, track by_src; classtype:trojan-activity; sid:2007702; rev:3;)
+alert tcp $HOME_NET any        -> $EXTERNAL_NET any         (msg:"E7[rb] ET P2P Phatbot Control Connection"; flow: established; content:"Wonk-"; content:"|00|#waste|00|"; within: 15; reference:url,www.lurhq.com/phatbot.html; classtype: trojan-activity; sid:2000015; rev:5;)
+
+
+
+
+
+
+
+

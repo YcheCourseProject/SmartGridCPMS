@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/Makefile.in
+END
+create_mssql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/create_mssql
+END
+create_oracle.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/create_oracle.sql
+END
+create_postgresql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/create_postgresql
+END
+create_mysql
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/create_mysql
+END
+create_db2
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/CPS_System/!svn/ver/15/trunk/Snort/schemas/create_db2
+END
