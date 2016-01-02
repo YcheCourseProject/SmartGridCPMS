@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/white"
+	    android:orientation="vertical"
+	    android:paddingTop="30dp" >
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+			<TextView
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:drawableLeft="@drawable/groupbuy_list_menu_icon"
+			    android:gravity="left|center_vertical"
+			    android:text="修改密码"
+			    android:textColor="@color/darkgrey"
+			    android:textColorLink="@color/darkgrey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+			<EditText
+			    android:id="@+id/gepasswd_EdtTxtPasswd"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:drawableLeft="@drawable/list_item_arrow"
+			    android:gravity="left|center_vertical"
+			    android:hint="**********"
+			    android:inputType="text"
+			    android:maxLength="10"
+			    android:maxLines="1"
+			    android:paddingTop="15dp"
+			    android:singleLine="true"
+			    android:text="1234567890"
+			    android:textColor="@color/grey"
+			    android:textSize="20dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+			<TextView
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="3"
+			    android:drawableLeft="@drawable/icon_zipcode"
+			    android:gravity="left|center_vertical"
+			    android:text=" 当前状态"
+			    android:textColor="@color/darkgrey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+			<ToggleButton
+			    android:id="@+id/gepasswd_passwd_state"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:checked="true"
+			    android:clickable="false"
+			    android:editable="false"
+			    android:enabled="false"
+			    android:text="On"
+			    android:textColor="@color/darkgrey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="10dp"
+		    android:gravity="center|center_horizontal|center_vertical"
+		    android:orientation="horizontal" >
+
+			<Button
+			    android:id="@+id/gepasswd_btnCrack"
+			    android:layout_width="0dp"
+			    android:layout_height="40dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/searchbtn_x"
+			    android:text="    Monitoring"
+			    android:textColor="@color/white"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+			<Button
+			    android:id="@+id/gepasswd_btnStop"
+			    android:layout_width="0dp"
+			    android:layout_height="40dp"
+			    android:layout_weight="1"
+			    android:background="@drawable/modifybtn_x"
+			    android:text="  Stop"
+			    android:textColor="@color/white"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|center_horizontal|center_vertical"
+			    android:orientation="horizontal" >
+
+			    <ProgressBar
+			        android:id="@+id/gepasswd_pb"
+			        style="?android:attr/progressBarStyleSmall"
+			        android:layout_width="wrap_content"
+			        android:layout_height="25dp"
+			        android:layout_weight="0.05" />
+		</LinearLayout>
+		
+		</LinearLayout>
+
+	
+	<Button
+	    android:id="@+id/gepasswd_btnCanel"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/blue_shortbtn_x"
+	    android:text="返回主菜单"
+	    android:textColor="@color/white"
+	    android:textSize="18dp"
+	    android:typeface="monospace" />
+
+</RelativeLayout>

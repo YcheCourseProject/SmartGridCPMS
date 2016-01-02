@@ -1,0 +1,339 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+	<TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="30dp"
+	    android:background="@color/white"
+	    android:orientation="vertical" >
+		
+	    
+	    <TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_marginBottom="7dp"
+		        android:layout_weight="3"
+		        android:drawableLeft="@drawable/icon_hotel_address"
+		        android:gravity="left|center_vertical"
+		        android:text="电表地址"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/grey"
+		        android:textSize="22dp" />
+
+			<TextView
+			    android:id="@+id/modify_tvIP"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:gravity="left|center_vertical"
+			    android:maxLines="1"
+			    android:singleLine="true"
+			    android:text="127.120.120.121"
+			    android:textSize="16dp"
+			    android:textStyle="bold|italic"
+			    android:typeface="normal" />
+
+		</TableRow>
+		
+	    
+		<TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="3"
+		        android:drawableLeft="@drawable/icon_homepage_myctrip_gold"
+		        android:gravity="left|center_vertical"
+		        android:text=" 电表类型"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/grey"
+		        android:textSize="22dp" />
+
+			<TextView
+			    android:id="@+id/modify_tvTypeName"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:gravity="left|center_vertical"
+			    android:maxLines="1"
+			    android:singleLine="true"
+			    android:text="PAC4200"
+			    android:textSize="16dp"
+			    android:textStyle="bold|italic"
+			    android:typeface="normal" />
+
+		</TableRow>
+		
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+			
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="3"
+		        android:drawableLeft="@drawable/icon_flight_board_warning"
+		        android:gravity="left|center_vertical"
+		        android:text="接线方式"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/grey"
+		        android:textSize="22dp" />
+
+			<Spinner
+			    android:id="@+id/modify_spinConType"
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="2" />
+
+		</TableRow>
+		
+		<TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="@color/lightgrey"
+		    android:focusable="false" >
+				
+				<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2dp"
+				    android:background="@color/lightgrey"
+				    android:visibility="visible" />
+			    
+		</TableRow>  
+			 
+		
+		
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+	
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:drawableLeft="@drawable/number_one"
+		        android:gravity="left|center_vertical"
+		        android:text="初级电流(A)"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/darkgrey"
+		        android:textSize="17dp" />
+		    
+		    <EditText
+		        android:id="@+id/modify_etPriCurrent"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/list_item_arrow"
+		        android:gravity="left|center_vertical"
+		        android:hint="****"
+		        android:inputType="number|numberDecimal"
+		        android:maxLines="1"
+		        android:paddingTop="15dp"
+		        android:singleLine="true"
+		        android:textColor="@color/grey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		</TableRow>
+		
+		
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+		
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:drawableLeft="@drawable/number_two"
+		        android:gravity="left|center_vertical"
+		        android:text="次级电流(A)"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/darkgrey"
+		        android:textSize="17dp" />
+		    
+		    <EditText
+		        android:id="@+id/modify_etSecCurrent"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/list_item_arrow"
+		        android:gravity="left|center_vertical"
+		        android:hint="****"
+		        android:inputType="number|numberDecimal"
+		        android:maxLines="1"
+		        android:paddingTop="15dp"
+		        android:singleLine="true"
+		        android:textColor="@color/grey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		</TableRow>
+		<TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="@color/lightgrey"
+		    android:focusable="false" >
+				
+				<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2dp"
+				    android:background="@color/lightgrey"
+				    android:visibility="visible" />
+			    
+		</TableRow>
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+		
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:drawableLeft="@drawable/number_one"
+		        android:gravity="left|center_vertical"
+		        android:text="初级电压(V)"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/darkgrey"
+		        android:textSize="17dp" />
+		    
+		    <EditText
+		        android:id="@+id/modify_etPriVoltage"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/list_item_arrow"
+		        android:gravity="left|center_vertical"
+		        android:hint="****"
+		        android:inputType="number"
+		        android:maxLines="1"
+		        android:paddingTop="15dp"
+		        android:singleLine="true"
+		        android:textColor="@color/grey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		</TableRow>
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+	
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:drawableLeft="@drawable/number_two"
+		        android:gravity="left|center_vertical"
+		        android:text="次级电压(V)"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/darkgrey"
+		        android:textSize="17dp" />
+		    
+		    <EditText
+		        android:id="@+id/modify_etSecVoltage"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/list_item_arrow"
+		        android:gravity="left|center_vertical"
+		        android:hint="****"
+		        android:inputType="number|numberDecimal"
+		        android:maxLines="1"
+		        android:paddingTop="15dp"
+		        android:singleLine="true"
+		        android:textColor="@color/grey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		</TableRow>
+		
+		<TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="2dp"
+		    android:background="@color/lightgrey"
+		    android:focusable="false" >
+				
+				<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2dp"
+				    android:background="@color/lightgrey"
+				    android:visibility="visible" />
+			    
+		</TableRow>
+		
+		<LinearLayout
+			android:gravity="center|center_horizontal|center_vertical"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+		     <Button
+		         android:id="@+id/modify_btnRead"
+		         android:layout_width="0dp"
+		         android:layout_height="40dp"
+		         android:layout_weight="1"
+		         android:background="@drawable/searchbtn_x"
+		         android:text="读取"
+		         android:textColor="@color/white"
+		         android:textSize="18dp"
+		         android:typeface="monospace" />
+	
+		    <Button
+		        android:id="@+id/modify_btnModify"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/modifybtn_x"
+		        android:text="修改"
+		        android:textColor="@color/white"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		</LinearLayout>
+		
+		<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|center_horizontal|center_vertical"
+			    android:orientation="horizontal" >
+
+			    <ProgressBar
+			        android:id="@+id/modifypara_pb"
+			        style="?android:attr/progressBarStyleSmall"
+			        android:layout_width="wrap_content"
+			        android:layout_height="25dp"
+			        android:layout_weight="0.05" />
+		</LinearLayout>
+
+	</TableLayout>
+
+	<Button
+	    android:id="@+id/modify_btnBack"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/blue_shortbtn_x"
+	    android:text="返回"
+	    android:textColor="@color/white"
+	    android:textSize="18dp"
+	    android:typeface="monospace" />
+
+</RelativeLayout>

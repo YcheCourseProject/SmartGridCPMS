@@ -1,0 +1,21 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+
+    <style name="button_yellow">
+        <item name="android:background">@color/orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:typeface">monospace</item>
+         
+        
+    </style>
+
+    <style name="button_blue">
+        <item name="android:background"> @drawable/blue_shortbtn_x</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+</resources>

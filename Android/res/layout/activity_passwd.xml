@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="fill_parent"
+	    android:background="@color/white"
+	    android:orientation="vertical"
+	    android:paddingTop="30dp" >
+	
+	    	<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/groupbuy_list_menu_icon"
+		        android:gravity="left|center_vertical"
+		        android:text="当前密码"
+		        android:textColor="@color/darkgrey"
+		        android:textColorLink="@color/darkgrey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+		    
+			<EditText
+			    android:id="@+id/passwd_etOldPasswd"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:drawableLeft="@drawable/list_item_arrow"
+			    android:gravity="left|center_vertical"
+			    android:hint="****"
+			    android:inputType="number"
+			    android:maxLength="4"
+			    android:maxLines="1"
+			    android:paddingTop="15dp"
+			    android:singleLine="true"
+			    android:textColor="@color/grey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		
+			<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+			
+			
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+			<TextView
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="3"
+			    android:drawableLeft="@drawable/icon_zipcode"
+			    android:gravity="left|center_vertical"
+			    android:text="密码保护状态"
+			    android:textColor="@color/darkgrey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+			<ToggleButton
+			    android:id="@+id/passwd_tbOldState"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:checked="true"
+			    android:editable="false"
+			    android:enabled="false"
+			    android:textColor="@color/darkgrey"
+			    android:textOff="OFF"
+			    android:textOn="ON"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		
+			<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+
+			<LinearLayout
+				android:background="@color/white"
+				android:layout_height="wrap_content"
+				android:layout_width="fill_parent" >
+
+				<View
+				    android:layout_width="0dp"
+				    android:layout_height="2px"
+				    android:layout_weight="1"
+				    android:background="@color/lightgrey" />
+
+		    <Button
+		        android:id="@+id/passwd_btnRead"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/searchbtn_x"
+		        android:scaleType="centerCrop"
+		        android:src="@drawable/searchbtn_x"
+		        android:text="破解"
+		        android:textColor="@color/white"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		    <View
+		        android:layout_width="0dp"
+		        android:layout_height="2px"
+		        android:layout_weight="1"
+		        android:background="@color/lightgrey" />
+
+		    </LinearLayout>
+		
+	<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+	
+	<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/groupbuy_list_menu_icon"
+		        android:gravity="left|center_vertical"
+		        android:text="旧密码"
+		        android:textColor="@color/darkgrey"
+		        android:textColorLink="@color/darkgrey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+		    
+			<EditText
+			    android:id="@+id/passwd_etCurPasswd"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:drawableLeft="@drawable/list_item_arrow"
+			    android:gravity="left|center_vertical"
+			    android:hint="****"
+			    android:inputType="number"
+			    android:maxLength="4"
+			    android:maxLines="1"
+			    android:paddingTop="15dp"
+			    android:singleLine="true"
+			    android:textColor="@color/grey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+	
+	
+	
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+		    <TextView
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:drawableLeft="@drawable/groupbuy_list_menu_icon"
+		        android:gravity="left|center_vertical"
+		        android:text="新密码"
+		        android:textColor="@color/darkgrey"
+		        android:textColorLink="@color/darkgrey"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+		    
+			<EditText
+			    android:id="@+id/passwd_etNewPasswd"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:drawableLeft="@drawable/list_item_arrow"
+			    android:gravity="left|center_vertical"
+			    android:hint="****"
+			    android:inputType="number"
+			    android:maxLength="4"
+			    android:maxLines="1"
+			    android:paddingTop="15dp"
+			    android:singleLine="true"
+			    android:textColor="@color/grey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		
+			<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+			
+			
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+
+			<TextView
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="3"
+			    android:drawableLeft="@drawable/icon_zipcode"
+			    android:gravity="left|center_vertical"
+			    android:text="新密码保护状态"
+			    android:textColor="@color/darkgrey"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+			<ToggleButton
+			    android:id="@+id/passwd_tbNewState"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:checked="true"
+			    android:textColor="@color/darkgrey"
+			    android:textOff="OFF"
+			    android:textOn="ON"
+			    android:textSize="18dp"
+			    android:typeface="monospace" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:background="@color/white"
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent" >
+
+				<View
+				    android:layout_width="0dp"
+				    android:layout_height="2px"
+				    android:layout_weight="1"
+				    android:background="@color/lightgrey" />
+
+		    <Button
+		        android:id="@+id/passwd_btnModify"
+		        android:layout_width="0dp"
+		        android:layout_height="40dp"
+		        android:layout_weight="1"
+		        android:background="@drawable/modifybtn_x"
+		        android:scaleType="centerCrop"
+		        android:src="@drawable/modifybtn_x"
+		        android:text="修改"
+		        android:textColor="@color/white"
+		        android:textSize="18dp"
+		        android:typeface="monospace" />
+
+		    <View
+		        android:layout_width="0dp"
+		        android:layout_height="2px"
+		        android:layout_weight="1"
+		        android:background="@color/lightgrey" />
+
+		    </LinearLayout>
+		
+		
+			<View
+				    android:layout_width="fill_parent"
+				    android:layout_height="2px"
+				    android:background="@color/lightgrey" />
+			
+		<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|center_horizontal|center_vertical"
+			    android:orientation="horizontal" >
+
+			    <ProgressBar
+			        android:id="@+id/sentronpasswd_pb"
+			        style="?android:attr/progressBarStyleSmall"
+			        android:layout_width="wrap_content"
+			        android:layout_height="25dp"
+			        android:layout_weight="0.05" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<Button
+	    android:id="@+id/passwd_btnCanel"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/blue_shortbtn_x"
+	    android:text="返回主菜单"
+	    android:textColor="@color/white"
+	    android:textSize="18dp"
+	    android:typeface="monospace" />
+
+</RelativeLayout>

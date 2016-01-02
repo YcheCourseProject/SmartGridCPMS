@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingTop="30dp" >
+        	<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingTop="30dp" 
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+            <Button
+                android:id="@+id/scan_btninputIP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="手动输入IP"
+                android:typeface="monospace" 
+               />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/flight_search_icon_normal"
+                android:gravity="left|center_vertical"
+                android:text="电表扫描地址范围 "
+                android:textColor="@color/darkgrey"
+                android:textColorLink="@color/darkgrey"
+                android:textSize="18dp"
+                android:typeface="monospace" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/scan_etStartIP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/list_item_arrow"
+                    android:gravity="left|center_vertical"
+                    android:hint="***.***.***.***"
+                    android:maxLines="1"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:text="192.168.1.100"
+                    android:textColor="@color/grey"
+                    android:textSize="14dp"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="to"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="22dp"
+                    android:typeface="monospace" />
+
+                <EditText
+                    android:id="@+id/scan_etEndIP"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/list_item_arrow"
+                    android:gravity="left|center_vertical"
+                    android:hint="***.***.***.***"
+                    android:maxLines="1"
+                    android:paddingTop="15dp"
+                    android:singleLine="true"
+                    android:text="192.168.1.110"
+                    android:textColor="@color/grey"
+                    android:textSize="14dp"
+                    android:typeface="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/scan_btnScan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/searchbtn_x"
+                    android:text="  开始扫描"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+
+                <Button
+                    android:id="@+id/scan_btnStop"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/modifybtn_x"
+                    android:text="  停止扫描"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/lightgrey"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/download_start_normal"
+                    android:gravity="left|center_vertical"
+                    android:text="  探测到的电表列表"
+                    android:textColor="@color/darkgrey"
+                    android:textColorLink="@color/darkgrey"
+                    android:textSize="18dp"
+                    android:typeface="monospace" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/lightgrey"
+                    android:visibility="visible" />
+            </LinearLayout>
+            
+			<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:gravity="center|center_horizontal|center_vertical"
+			    android:orientation="horizontal" >
+
+			    <ProgressBar
+			        android:id="@+id/scan_pb"
+			        style="?android:attr/progressBarStyleSmall"
+			        android:layout_width="wrap_content"
+			        android:layout_height="25dp"
+			        android:layout_weight="0.05" />
+			</LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/scrollwrap1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="45dp" >
+
+                <ScrollView
+                    android:id="@+id/scrollView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_ipGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+	
+    <Button
+        android:id="@+id/scan_btnCanel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blue_shortbtn_x"
+        android:text="返回主菜单"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:typeface="monospace" />
+
+</RelativeLayout>

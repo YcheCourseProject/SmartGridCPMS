@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">SG攻击模拟平台</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">配置电表连接参数</string>
+    <string name="title_activity_connecting">窃取数据</string>
+    <string name="title_connect_fail">连接失败!</string>
+    <string name="content_connect_fail">Please check the input, or the meter is out of service!</string>
+    <string name="title_activity_menu">SG攻击模拟平台</string>
+    <string name="title_activity_passwd">暴力破解密码</string>
+    <string name="title_activity_modifyparameter">修改敏感参数</string>
+    <string name="title_activity_iplist">嗅探电表</string>
+    <string name="title_activity_scan">扫描、嗅探电表</string>
+    <string name="title_activity_modify_para">修改敏感参数</string>
+    <string name="title_activity_gepasswd">Password Risk Analysis</string>
+    <string name="title_activity_father">FatherActivity</string>
+    <string name="title_activity_load_check">分析实时用电数据</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_modify_sqldata">修改负载信息库</string>
+    <string name="title_activity_show_sqldata">负载信息库</string>
+    <string name="title_activity_show_sql">负载信息库</string>
+    
+    <string name="hint_sql">提示：无功功率为负值</string>
+     <string name="modsql_loadname">Name</string>
+</resources>

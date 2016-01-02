@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button_config"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="负载信息库配置" 
+                style="@style/button_yellow"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp" >
+
+            <com.androidplot.xy.XYPlot
+                android:id="@+id/loadCheck_plot"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_small"
+                android:layout_marginBottom="@dimen/padding_large" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:gravity="center" >
+
+            <CheckBox
+                android:id="@+id/checkBoxAp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有功功率" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无功功率" />
+
+            <CheckBox
+                android:id="@+id/checkBoxVAp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视在功率" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="108dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="bottom|center" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:id="@+id/loadCheck_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loadCheck_btnCanel"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:background="@drawable/blue_shortbtn_x"
+        android:text="返回"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:typeface="monospace" />
+
+</RelativeLayout>

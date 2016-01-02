@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/darkgrey"
+    android:gravity="center_horizontal|center_vertical" >
+
+<TableLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="30dp"
+    android:background="@color/darkgrey"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+	    
+	    <TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+
+		    <TextView
+		    	android:drawableLeft="@drawable/icon_hotel_address"
+		    	android:gravity="left|center_vertical"
+		    	android:layout_height="fill_parent"
+		    	android:layout_marginBottom="7dp"
+		    	android:layout_marginLeft="5dp"
+		    	android:layout_weight="3"
+		    	android:layout_width="0dp"
+		    	android:text=" IP地址"
+		    	android:textAppearance="?android:attr/textAppearanceLarge"
+		    	android:textColor="@color/white"
+		    	android:textSize="22dp" />
+
+			<TextView
+			    android:id="@+id/menu_tvIP"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:gravity="left|center_vertical"
+			    android:maxLines="1"
+			    android:singleLine="true"
+			    android:textColor="@color/white"
+			    android:textSize="16dp"
+			    android:textStyle="bold|italic"
+			    android:typeface="normal" />
+
+		</TableRow>
+		
+	    
+		<TableRow
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+
+		    <TextView
+		    	android:drawableLeft="@drawable/icon_homepage_myctrip_gold"
+		    	android:gravity="left|center_vertical"
+		    	android:layout_height="fill_parent"
+		    	android:layout_marginLeft="5dp"
+		    	android:layout_weight="3"
+		    	android:layout_width="0dp"
+		    	android:text=" 电表类型"
+		    	android:textAppearance="?android:attr/textAppearanceLarge"
+		    	android:textColor="@color/white"
+		    	android:textSize="22dp" />
+
+			<TextView
+			    android:id="@+id/menu_tvTypeName"
+			    android:layout_width="0dp"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="2"
+			    android:gravity="left|center_vertical"
+			    android:maxLines="1"
+			    android:singleLine="true"
+			    android:textColor="@color/white"
+			    android:textSize="16dp"
+			    android:textStyle="bold|italic"
+			    android:typeface="normal" />
+
+		</TableRow>
+		<TableRow
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:orientation="horizontal" >
+			
+		    <TextView
+		    	android:drawableLeft="@drawable/icon_flight_board_warning"
+		    	android:gravity="left|center_vertical"
+		    	android:layout_height="fill_parent"
+		    	android:layout_marginLeft="5dp"
+		    	android:layout_weight="3"
+		    	android:layout_width="0dp"
+		    	android:text="当前连接状态"
+		    	android:textAppearance="?android:attr/textAppearanceLarge"
+		    	android:textColor="@color/white"
+		    	android:textSize="22dp" />
+
+		    <TextView
+		        android:id="@+id/menu_tvState"
+		        android:layout_width="0dp"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="2"
+		        android:gravity="left|center_vertical"
+		        android:maxLines="1"
+		        android:singleLine="true"
+		        android:textColor="@color/white"
+		        android:textSize="16dp"
+		        android:textStyle="bold|italic"
+		        android:typeface="normal" />
+
+		    </TableRow>
+
+    <LinearLayout
+    	android:background="@color/darkgrey"
+    	android:layout_gravity="center"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="15dp"
+    	android:layout_width="wrap_content"
+    	android:orientation="vertical" >
+
+        <LinearLayout
+        	android:background="@color/darkgrey"
+        	android:layout_gravity="center"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1.0"
+        	android:layout_width="wrap_content"
+        	android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/menu_btnScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@color/darkgrey"
+                android:scaleType="centerInside"
+                android:src="@drawable/scan" />
+
+            <ImageButton
+                android:id="@+id/menu_btnCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@color/darkgrey"
+                android:scaleType="centerInside"
+                android:src="@drawable/meter_data" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        	android:background="@color/darkgrey"
+        	android:layout_gravity="center"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="1.0"
+        	android:layout_width="wrap_content"
+        	android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/menu_btnPasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@color/darkgrey"
+                android:scaleType="centerInside"
+                android:src="@drawable/crack_data" />
+
+            <ImageButton
+                android:id="@+id/menu_btnModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@color/darkgrey"
+                android:scaleType="centerInside"
+                android:src="@drawable/modify_data" />
+
+        </LinearLayout>
+    </LinearLayout>
+</TableLayout>
+</RelativeLayout>
