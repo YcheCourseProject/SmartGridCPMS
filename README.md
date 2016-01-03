@@ -2,9 +2,9 @@
 1.	Android
   Attack the simulated smart grid with several meters.
 2. 	DonetConsole
--	DataAcquire
+	-	DataAcquire
   Acquire data from smart meters
--	InfoFusion
+	-	InfoFusion
   Fuse the info from cyber and physical sides
 3. 	DonetWeb
 Display Intrusion Status
