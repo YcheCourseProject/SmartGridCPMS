@@ -1,17 +1,17 @@
-1）ASG（Android工程文件）		为基于智能电表的，安卓移动端，模拟攻击系统代码
-================================================================================================
-2）DataAcquireExp（C#控制台工程文件）	为基于智能电表的，数据采集程序代码
-=================================================================================================
-3）Snort(Snort的文件)			为基于信息层信息的IDS,
-					Snort\etc下有对于snort的配置，Snort\rules下有对规则的配置代码					
- snort.bat（启动snort的批处理）		为启动snort的批处理文件代码
-=================================================================================================
-4）Fusion（C#控制台工程文件）		为物理、信息系统融合程序代码
-==============================================================================================
-5）SGCyberPhysicalFusionSystem		为基于物理、信息层融合结果的网站工程代码
-（.net网站工程文件）
-=================================================================================================
-6）SQL语句（SQL语句文件夹）		为数据库相关SQL语句,创建表、存储过程、视图的SQL语句
-=======================================================================================================
+#Smart Grid Cyber Physical Fusion Intrusion Detection System
+1. Android
+Attack the simulated smart grid with several meters.
+2. DonetConsole
+-DataAcquire
+Acquire data from smart meters
+-InfoFusion
+Fuse the info from cyber and physical sides
+3. DonetWeb
+Display Intrusion Status
+4. Snort
+Used for collecting cyber side information
+Snort.bat used for windows users
+5. SqlScripts
+Create Tables
  
 	
