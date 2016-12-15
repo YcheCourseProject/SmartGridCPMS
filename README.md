@@ -1,22 +1,23 @@
 #Smart Grid Cyber Physical Fusion Intrusion Detection System
-1. Android  
-  Attack the simulated smart grid with several meters.  
+##Android Client
+[Android Source Code](Android), the android app is used to
+attack the simulated smart grid with several meters.  
 
-2. DonetConsole  
- - DataAcquire    
-   Acquire data from smart meters  
- - InfoFusion  
-   Fuse the info from cyber and physical sides.  
+##Console Program  
+- [DataAcquire Module Source Code](DonetConsole/DataAcquire),
+this module is used to acquire data from smart meters  
+- [InfoFusion Module Source Code](DonetConsole/InfoFusion),
+this module is used to fuse the info from cyber and physical sides.  
 
-3. DonetWeb  
-   Display Intrusion Status  
+##Web Program  
+- [Web Source Code](DonetWeb), this module is used to display intrusion status,
+this part is the most important part of whole project, which mainly uses `.net`
+and `javascript`.
 
-4. Snort    
-  Used for collecting cyber side information  
-  Snort.bat used for windows users  
 
-5. SqlScripts  
-  Create Tables  
+##Snort Files
+- [Snort Files](Snort), third-party codes, used for collecting cyber side information  
+- [Snort.bat](snort.bat) is used for windows users  
 
- 
-	
+##SqlScripts  
+- [SqlScripts](SqlScripts), script used for creating tables  
