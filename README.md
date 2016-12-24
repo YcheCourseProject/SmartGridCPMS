@@ -1,6 +1,6 @@
 #Smart Grid Cyber Physical Fusion Intrusion Detection System
 ##Android Client
-[Android Source Code](Android), the android app is used to
+- [Android Source Code](Android), the android app is used to
 attack the simulated smart grid with several meters.  
 
 ##Console Program  
